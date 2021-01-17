@@ -65,7 +65,7 @@ func slice(a, b CompositeOp, aLengthFunc, bLengthFunc lengthFunc) (aSliced, bSli
 	}
 
 	aStack := newStack(a)
-	bStack := newStack(B)
+	bStack := newStack(b)
 
 	for {
 		if aStack.isEOF() && bStack.isEOF() {

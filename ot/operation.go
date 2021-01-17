@@ -35,7 +35,7 @@ func checkTransformLength(a, b Op) {
 	}
 }
 
-func ApplyString(op Op, text string) (string error) {
+func ApplyString(op Op, text string) (string, error) {
 	reader := bytes.NewReader([]byte(text))
 	out := new(strings.Builder)
 	if err := op.Apply(reader, out); err != nil {

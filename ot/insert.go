@@ -25,7 +25,7 @@ func (i Insert) Slice(start, end int) PrimitiveOp {
 	return Insert{Text: i.Text[start:end]}
 }
 
-func (i Insert) Apply(r ioReader, w io.Writer) error {
+func (i Insert) Apply(r io.Reader, w io.Writer) error {
 	_, err := io.WriteString(w, i.Text)
 
 	return err

@@ -25,7 +25,7 @@ func (r Retain) Slice(start, end int) PrimitiveOp {
 	return Retain{Count: end - start}
 }
 
-func (r Retain) Apply(r io.Reader, w io.Writer) error {
+func (r Retain) Apply(reader io.Reader, w io.Writer) error {
 	_, err := io.CopyN(w, reader, int64(r.Count))
 
 	return err

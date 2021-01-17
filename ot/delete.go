@@ -3,6 +3,7 @@ package ot
 import (
 	"fmt"
 	"io"
+	"io/ioutil"
 )
 
 type Delete struct {
