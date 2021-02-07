@@ -61,7 +61,7 @@ func (m *MemoryStateStore) ApplyClient(opMsg OpMessage) error {
 	m.ops = append(m.ops, res.Op)
 
 	m.opStream <- OpMessage{
-		AuthorId: opMsg.AuthorID,
+		AuthorId: opMsg.AuthorId,
 		Op:       res.Op,
 		Revision: res.Revision,
 	}
