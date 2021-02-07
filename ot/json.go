@@ -32,7 +32,7 @@ func newJSONOp(op PrimitiveOp) (jsonOp, error) {
 	case Insert:
 		return jsonOp{
 			Type:  "insert",
-			Count: op.Text,
+			Text: op.Text,
 		}, nil
 	}
 
